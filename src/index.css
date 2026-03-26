@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Cores baseadas na referência (Reflect) */
+  --color-background: #030303;
+  --color-surface: #0a0a0a;
+  --color-surface-hover: #141414;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-accent: #7c3aed; /* Purple 600 */
+  --color-accent-glow: rgba(124, 58, 237, 0.15);
+}
+
+body {
+  background-color: var(--color-background);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  
+  /* Esconder barra de rolagem lateral */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari e Opera */
+}
+
+/* Utilitário para texto com gradiente sutil */
+.text-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.6) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Efeito de vidro premium */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--color-border);
+}
+
